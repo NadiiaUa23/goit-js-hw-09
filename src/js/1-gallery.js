@@ -1,14 +1,10 @@
 
 import SimpleLightbox from "simplelightbox";
-
 import "simplelightbox/dist/simple-lightbox.min.css";
-
-
-
 const lightbox = new SimpleLightbox('.gallery a', {
      /* options */ 
     });
- 
+
 
 const images=[ {
     //preview посилання на маленьку версію зображення для картки галереї.
@@ -103,15 +99,12 @@ gallery.insertAdjacentHTML("beforeend", images.map((image) => `
 </li>
 `).join("")
 );
+console.log(gallery);
 
-//елементах галереї та отримання посилання на велике зображення при кліку з бібліотекаю
-
-gallery.addEventListener("click", (event) => {
-    const targetLink = event.target.closest(".gallery-link");
-    // если мимо силки -картинки верни мне галерею
-    if (!targetLink) return;
-    // приостановить загрузку картинки на комп 
-      event.preventDefault();  
-    // создадим картинку с большим разрешением и в консоль  сілку на большое разрешение
-      const largeImgeSrc = targetLink.querySelector('.gallery-image').getAttribute("data-source");
-});
+// Ініціалізуйте SimpleLightbox 
+document.addEventListener("DOMContentLoaded", function () {
+    const lightbox = new SimpleLightbox('.gallery a', {
+      captionsData: "alt",
+      captionDelay: 250,
+    });
+  });
