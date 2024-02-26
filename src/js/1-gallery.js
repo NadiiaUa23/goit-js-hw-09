@@ -87,8 +87,6 @@ preview:
 ,
 ];
 
-
-
 const gallery = document.querySelector(".gallery");
 
 //використання рядка шаблону з .insertAdjacentHTML (targetElement.insertAdjacentHTML(position, text);)
@@ -105,3 +103,15 @@ gallery.insertAdjacentHTML("beforeend", images.map((image) => `
 </li>
 `).join("")
 );
+
+//елементах галереї та отримання посилання на велике зображення при кліку з бібліотекаю
+
+gallery.addEventListener("click", (event) => {
+    const targetLink = event.target.closest(".gallery-link");
+    // если мимо силки -картинки верни мне галерею
+    if (!targetLink) return;
+    // приостановить загрузку картинки на комп 
+      event.preventDefault();  
+    // создадим картинку с большим разрешением и в консоль  сілку на большое разрешение
+      const largeImgeSrc = targetLink.querySelector('.gallery-image').getAttribute("data-source");
+    // console.log(largeImgeSrc);
