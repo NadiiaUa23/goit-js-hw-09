@@ -114,4 +114,4 @@ gallery.addEventListener("click", (event) => {
       event.preventDefault();  
     // создадим картинку с большим разрешением и в консоль  сілку на большое разрешение
       const largeImgeSrc = targetLink.querySelector('.gallery-image').getAttribute("data-source");
-    // console.log(largeImgeSrc);
+});
