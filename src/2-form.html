@@ -10,10 +10,24 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body class="page3">
   <section>
     <a href="./index.html">Go to home</a>
     <h1>Welcome to page 3</h1>
+    <div class="form">
+      <form class="feedback-form" autocomplete="off">
+        <label class="label-name">
+          Email
+          <input type="email" class="email-imput" name="email" placeholder="Write your email" autofocus />
+        </label>
+        <label class="label-name">
+          Message
+          <textarea name="message" rows="8" class="message-text"></textarea>
+        </label>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+
   </section>
 
   <script type="module" src="./js/2-form.js"></script>
