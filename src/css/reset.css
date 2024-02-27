@@ -133,6 +133,7 @@ input::placeholder {
   width: 360px;
   height: 80px;
   margin-top: 8px;
+  overflow: hidden;
 }
 
 .btn {
