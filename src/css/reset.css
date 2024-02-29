@@ -134,6 +134,11 @@ input::placeholder {
   height: 80px;
   margin-top: 8px;
   overflow: hidden;
+
+}
+
+textarea {
+  resize: none;
 }
 
 .btn {
